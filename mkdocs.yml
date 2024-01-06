@@ -63,6 +63,8 @@ plugins:
 
 nav:
   - Getting Started: index.md
+  - Tutorials:
+      - ROS2 Workspace & Colcon: colcon.md
 
 markdown_extensions:
   - tables
