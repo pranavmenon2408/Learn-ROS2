@@ -93,3 +93,39 @@ ros2 run demo_nodes_py listener  # run the listener example
 ```
 
 ![Talker and Listener](assets/talker_listener.png)
+
+## Submitting Tasks
+
+To submit a task or exercise, you need to fork this repository and make changes in your forked repository.
+
+### Forking the Repository
+
+Head over to this [repository](https://github.com/RoboManipal/Learn-ROS2) and click on the fork button on the top right corner of the page.
+
+![Fork](assets/fork.png)
+
+This will create a copy of the repository in your GitHub account. Now, clone the repository to your system.
+
+```bash
+git clone <your-forked-repo-url>  # clone the repository
+cd Learn-ROS2  # change directory to the repository
+```
+
+### Making Changes
+
+Open the folder in your favourite editor and make changes to the files. Once you are done, run the following commands to commit your changes.
+
+```bash
+git add .  # add all the files to the staging area
+git commit -m "Add <task-name>"  # commit your changes
+git push origin master  # push your changes to your forked repository
+```
+
+![Editor](assets/editor.png)
+
+## Resources
+
+- [ROS2 Documentation](https://docs.ros.org/en/humble/index.html)
+- [ROS2 Tutorials](https://docs.ros.org/en/humble/Tutorials.html)
+- [ROS2 Index](https://fkromer.github.io/awesome-ros2/)
+- [ROS2 GitHub](https://github.com/ros2)
