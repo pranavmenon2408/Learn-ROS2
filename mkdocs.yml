@@ -1,0 +1,114 @@
+site_name: Learn ROS2
+repo_url: https://github.com/RoboManipal/Learn-ROS2
+site_description: A website to learn ROS2
+site_author: FallenDeity
+copyright: Copyright FallenDeity ( 2024 - present )
+site_url: https://robomanipal.github.io/Learn-ROS2/
+
+theme:
+  name: "material"
+  language: en
+  custom_dir: docs/overrides
+  logo: assets/ros.png
+  favicon: assets/ros.png
+
+  font:
+    text: Ubuntu
+
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.sections
+    - content.code.annotate
+    - content.code.copy
+    - content.tabs.link
+    - toc.follow
+    - toc.integrate
+    - navigation.footer
+  palette:
+    - scheme: light
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-sunny
+        name: Light Mode
+    - scheme: slate
+      primary: indigo
+      accent: teal
+      toggle:
+        icon: material/weather-night
+        name: Dark Mode
+
+plugins:
+  - glightbox
+  - mkdocstrings:
+      handlers:
+        python:
+          options:
+            show_root_heading: true
+            show_root_toc_entry: false
+            docstring_style: numpy
+            merge_init_into_class: true
+            inherited_members: true
+          import:
+            - https://docs.python.org/3.10/objects.inv
+  - search
+  - social:
+      cards_layout_options:
+        background_color: "#352fa3"
+        color: "#ffffff"
+
+nav:
+  - Getting Started: index.md
+
+markdown_extensions:
+  - tables
+  - footnotes
+  - pymdownx.betterem
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+  - abbr
+  - admonition
+  - attr_list
+  - md_in_html
+  - pymdownx.details
+  - pymdownx.superfences
+  - def_list
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - toc:
+      permalink: ⚓︎
+  - pymdownx.highlight:
+      auto_title: true
+      line_spans: __span
+      anchor_linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra:
+  version: 0.1.0
+  generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/RoboManipal/Learn-ROS2
+    - icon: fontawesome/brands/discord
+      link: https://discord.com/servers/open-robotics-1077825543698927656
+  comments:
+    enabled: true
+    mode: giscus
