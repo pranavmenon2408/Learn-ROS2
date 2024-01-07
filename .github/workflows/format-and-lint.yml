@@ -32,6 +32,15 @@ jobs:
       - name: Linting with ruff
         run: |
           poetry run ruff .
+      - name: Type checking with mypy
+        run: |
+          poetry run mypy .
+      - name: Install clang-format
+        run: |
+          sudo apt-get install clang-format
+      - name: Format with clang-format
+        run: |
+          find . -iname *.cpp -o -iname *.hpp -o -iname *.c -o -iname *.h | xargs clang-format -i -style=file
       - name: Build docs
         run: |
           poetry run mkdocs gh-deploy --force

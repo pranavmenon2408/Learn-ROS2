@@ -65,6 +65,7 @@ nav:
   - Getting Started: index.md
   - Tutorials:
       - ROS2 Workspace & Colcon: colcon.md
+      - Publisher & Subscriber: pub_sub.md
 
 markdown_extensions:
   - tables

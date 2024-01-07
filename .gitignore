@@ -118,3 +118,5 @@ dmypy.json
 cython_debug/
 .idea/
 .vscode/
+CMakeFiles/
+CMakeCache.txt

@@ -47,3 +47,25 @@ repos:
         language: python
         stages:
           - commit
+
+  - repo: local
+    hooks:
+      - id: mypy
+        name: mypy
+        pass_filenames: false
+        entry: poetry
+        args: ["run", "mypy", "."]
+        language: python
+        stages:
+          - commit
+
+  - repo: local
+    hooks:
+      - id: clang-format
+        name: clang-format
+        pass_filenames: false
+        language: system
+        entry: bash
+        args: ["-c", "find . -iname *.cpp -o -iname *.hpp -o -iname *.c -o -iname *.h | xargs clang-format -i -style=file"]
+        stages:
+          - commit
