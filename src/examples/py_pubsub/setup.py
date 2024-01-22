@@ -21,6 +21,7 @@ setup(
         "console_scripts": [
             "publisher = py_pubsub.publisher:main",
             "subscriber = py_pubsub.subscriber:main",
+            "snowman=py_pubsub.snowman_maker:main",
         ],
     },
 )
