@@ -66,6 +66,7 @@ nav:
   - Tutorials:
       - ROS2 Workspace & Colcon: colcon.md
       - Publisher & Subscriber: pub_sub.md
+      - TurtleSim for Beginners: turtlesim.md
 
 markdown_extensions:
   - tables
